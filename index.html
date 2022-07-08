@@ -1,34 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/todo.js"></script>
-  </head>
-  <body>
-    <section>
-      <h1>Todo List</h1>
-      <form action="">
-        <label for="addInput">
-          <input
-            type="text"
-            placeholder="할 일을 입력하세요"
-            class="input__text"
-            id="addInput"
-          />
-        </label>
-        <div>
-          <button>추가</button>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo-VanillaJs</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="todoWrap">
+            <div class="todoTitle">Todos</div>
+            <div class="todoBox">
+                <div class="todoInputBox">
+                    <button class="completeAllBtn">✔</button>
+                    <input
+                        type="text"
+                        class="todoInput"
+                        placeholder="해야 할 일을 입력해주세요."
+                    />
+                </div>
+                <ul class="todoList">
+                    <!-- <li class="todoItem checked">
+                        <div class="checkbox">✔</div>
+                        <div class="todo">첫번째 할 일</div>
+                        <button class="delBtn">x</button>
+                    </li>
+                    <li class="todoItem">
+                        <div class="checkbox"></div>
+                        <div class="todo">두번째 할 일</div>
+                        <button class="delBtn">x</button>
+                    </li>
+                    <li class="todoItem">
+                        <div class="checkbox"></div>
+                        <div class="todo">세번째 할 일</div>
+                        <button class="delBtn">x</button>
+                    </li> -->
+                </ul>
+                <div class="todoBottom">
+                    <div class="leftItems">3 items left</div>
+                    <div class="buttonGroup">
+                        <button class="showAllBtn selected" data-type="all">
+                            All
+                        </button>
+                        <button class="showActiveBtn" data-type="active">
+                            Active
+                        </button>
+                        <button class="showCompletedBtn" data-type="completed">
+                            Completed
+                        </button>
+                    </div>
+                    <button class="clearCompletedBtn">Clear Completed</button>
+                </div>
+            </div>
+            <p class="info">더블클릭 시 수정 가능!</p>
         </div>
-      </form>
-      <article>
-        <ul>
-          <li>블로그 정리</li>
-        </ul>
-      </article>
-    </section>
-  </body>
+
+        <script src="js/todo.js"></script>
+    </body>
 </html>
